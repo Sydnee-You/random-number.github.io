@@ -38,20 +38,21 @@ var howMany = document.getElementById("howMany");
 var howManyButton = document.getElementById("howManyButton");
 var howManyCheck = document.getElementById("howManyCheck");
 
-minButton.addEventListener('click', function () {
-    var userInput = minRange.value;
-    var displayText = minCheck;
-    displayText.innerHTML += userInput;
-});
+//put all the above variables into an array of objects.
+//default display is for setting the display back to default when the user deletes or inputs another value
+const elements = [
+    {button: minButton, input: minRange, display: minCheck, defaultDisplay: "Min Number: &nbsp;"},
+    {button: maxButton, input: maxRange, display: maxCheck, defaultDisplay: "Max Number: &nbsp;"},
+    {button: howManyButton, input: howMany, display: howManyCheck, defaultDisplay: "How Many: &nbsp;"}
+];
 
-maxButton.addEventListener('click', function () {
-    var userInput = maxRange.value;
-    var displayText = maxCheck;
-    displayText.innerHTML += userInput;
-});
+/*loop through each object in elements array to make it such that when you add an input and click on their
+respective button, the paragraph below clarifies what you inputted.
+*/
+elements.forEach(function (element) {
+    element.button.addEventListener("click", function() {
+        element.display.innerHTML = element.defaultDisplay;
+        element.display.innerHTML += element.input.value;
+    });
 
-howManyButton.addEventListener('click', function () {
-    var userInput = howMany.value;
-    var displayText = howManyCheck;
-    displayText.innerHTML += userInput;
 });
