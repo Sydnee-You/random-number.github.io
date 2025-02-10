@@ -46,6 +46,9 @@ var howManyHold = 0;
 var howManyCheck = document.getElementById("howManyCheck");
 var howManyHasInput = false;
 
+//numbers randomly generated based on user input range.
+const chosenNumbers = document.getElementById("chosenNumbers");
+
 //put all the above variables into an array of objects.
 //default display is for setting the display back to default when the user deletes or inputs another value
 const elements = [
@@ -64,6 +67,8 @@ elements.forEach(function (element) {
           input, which we don't want.
         */
         element.display.innerHTML = element.defaultDisplay;
+        chosenNumbers.innerHTML = '';
+
         console.log(element);
 
         // Convert the input value to a number
@@ -144,9 +149,16 @@ elements.forEach(function (element) {
                 //for the "how many" value
                 const theFullRange = [];
 
-                for(var i = elements[0].hold; i <= elements[1].hold; i++) {
+                for(let i = elements[0].hold; i <= elements[1].hold; i++) {
                     theFullRange.push(i);
                     console.log("added " + i + " to the array list");
+                }
+
+                for(let i = 1; i <= elements[2].hold; i++) {
+                    const randomIndex = Math.floor(Math.random() * theFullRange.length);
+                    const randomNumber = theFullRange.splice(randomIndex, 1)[0];
+                    console.log(`Random number #${i} is: ${randomNumber}`);
+                    chosenNumbers.innerHTML += randomNumber + "<br>";
                 }
 
             } else {
