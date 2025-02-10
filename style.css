@@ -13,3 +13,10 @@ button {
     margin-top: 50px;
   gap: 30px;
 }
+
+iframe {
+    width: 800px;
+    display: flex;
+    justify-self: center;
+    top: 700px;
+}
