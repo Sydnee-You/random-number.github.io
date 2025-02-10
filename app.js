@@ -72,7 +72,7 @@ elements.forEach(function (element) {
                     if(element.hold > elements[1].hold) {
                         element.hold = 0;
                         element.hasInput = false;
-                        element.display.innerHTML += " min number needs to be smaller than max number";
+                        element.display.innerHTML += " min needs to be smaller than max";
                         
                     } else {
                         element.hasInput = true;
@@ -95,7 +95,7 @@ elements.forEach(function (element) {
                     if(elements[0].hold > element.hold) {
                         element.hold = 0;
                         element.hasInput = false;
-                        element.display.innerHTML += " max number needs to be bigger than min number";
+                        element.display.innerHTML += " max needs to be bigger than min";
                     } else {
                         element.hasInput = true;
                         element.display.innerHTML += element.input.value;
@@ -116,7 +116,7 @@ elements.forEach(function (element) {
                     if(element.hold > range) {
                         element.hold = 0;
                         element.hasInput = false;
-                        element.display.innerHTML += " How many numbers should be smaller than the range";
+                        element.display.innerHTML += "This should be smaller than the range";
                     } else {
                         element.hasInput = true;
                         element.display.innerHTML += element.input.value;
@@ -152,7 +152,7 @@ elements.forEach(function (element) {
         } else {
             element.hold = 0;
             element.hasInput = false;
-            element.display.innerHTML += " Integers only please";
+            element.display.innerHTML += "Integers only, please";
         }
     });
 

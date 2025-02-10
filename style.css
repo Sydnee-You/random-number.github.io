@@ -1,22 +1,38 @@
 button {
-    color: blue;
+    background-color: blue;
+    color: white;
+    opacity: 0.5;
+    transition: 1s;
 }
+
+button:hover {opacity: 1}
+
 
 .inputBoxes {
     font-size: small;
 
 }
 
+
+#randomTitle {
+    text-align: center;
+}
+
 #userInputs {
-    display:flex;
+    display: flex;
     justify-content: center;
     margin-top: 50px;
-  gap: 30px;
+    gap: 100px;
+}
+
+#maxCheck, #minCheck, #howManyCheck {
+    font-size: x-small;
 }
 
 #results {
     text-align: center;
 }
+
 .google-map {
     position: relative;
 }
