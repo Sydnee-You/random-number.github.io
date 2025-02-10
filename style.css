@@ -14,9 +14,14 @@ button {
   gap: 30px;
 }
 
+.google-map {
+    position: relative;
+}
+
 iframe {
-    width: 800px;
+    width: 1000px;
     display: flex;
     justify-self: center;
+    align-items: bottom;
     top: 700px;
 }
