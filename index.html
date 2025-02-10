@@ -13,28 +13,32 @@
 </head>
 
 <body>
+    <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">RNG Range</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="map.html">Map of Hawaii</a>
-              </li>
-            </ul>
-          </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">RNG Range</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">Map of Hawaii</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <br>
+    <!--User inputs a min number and a max number for the range of random numbers they want. The "how many" part
+    is for how many random numbers out of that range the user wants.-->
     <div id="userInputs">
         <div>
-            <i class="bi bi-info-circle"></i>
+            <i class="bi bi-info-circle" data-bs-toggle="tooltip" title="Enter the lowest number in the range you want to pull from"></i>
             <input type="text" id="minRange" placeholder="Enter the min number" class="inputBoxes">
             <button id="minButton">Submit</button>
             <br>
@@ -42,14 +46,14 @@
         </div>
 
         <div>
-            <i class="bi bi-info-circle"></i>
+            <i class="bi bi-info-circle" data-bs-toggle="tooltip" title="Enter the highest number in the range you want to pull from"></i>
             <input type="text" id="maxRange" placeholder="Enter the max number" class="inputBoxes">
             <button id="maxButton">Submit</button>
             <p id="maxCheck">Max Number: &nbsp;</p>
         </div>
 
         <div>
-            <i class="bi bi-info-circle"></i>
+            <i class="bi bi-info-circle" data-bs-toggle="tooltip" title="Enter the amount of random numbers you want in the range you want to pull from"></i>
             <input type="text" id="howMany" placeholder="Enter how many numbers to pick" class="inputBoxes">
             <button id="howManyButton">Submit</button>
             <p id="howManyCheck">How Many Numbers: &nbsp;</p>
@@ -57,10 +61,10 @@
     </div>
     <div id="results">
         <br>
-        <h3>You Randomly Chosen Numbers Based on Your Inputted Range and Amount:</h3>
+        <h3>Your Randomly Chosen Numbers Based on Your Inputted Range and Amount:</h3>
         <h2 id="chosenNumbers">
         </h2>
-        </div>
+    </div>
 
 
     <script src="app.js"></script>
