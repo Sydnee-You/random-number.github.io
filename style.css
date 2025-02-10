@@ -28,7 +28,7 @@ button:hover {opacity: 1}
     justify-content: center;
     margin-top: 50px;
     gap: 100px;
-    background: rgb(255, 255, 255, 0.3);
+    background: rgba(60, 139, 185, 0.3);
 }
 
 
